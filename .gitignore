@@ -1,0 +1,6 @@
+/build*/
+/.vs/
+/CMakeUserPresets.json
+/.wind/
+__pycache__/
+*.pyc
