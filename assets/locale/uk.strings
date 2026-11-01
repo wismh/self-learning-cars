@@ -1,0 +1,562 @@
+locale = "uk"
+
+[[string]]
+id = "app.title"
+text = "Самонавчальні машинки — Симуляція нейроеволюції"
+
+[[string]]
+id = "ui.tab.simulation"
+text = "Симуляція"
+
+[[string]]
+id = "ui.tab.stats"
+text = "Статистика"
+
+[[string]]
+id = "ui.tab.help"
+text = "Довідка"
+
+[[string]]
+id = "ui.tab.theory"
+text = "Довідка"
+
+[[string]]
+id = "ui.group.control"
+text = "Керування"
+
+[[string]]
+id = "ui.group.metrics"
+text = "Показники наживо"
+
+[[string]]
+id = "ui.group.track"
+text = "Генерація траси"
+
+[[string]]
+id = "ui.group.evolution"
+text = "Генетичний алгоритм"
+
+[[string]]
+id = "ui.btn.play"
+text = "Продовжити"
+
+[[string]]
+id = "ui.btn.pause"
+text = "Пауза"
+
+[[string]]
+id = "ui.btn.reset"
+text = "Перезапуск"
+
+[[string]]
+id = "ui.btn.next_track"
+text = "Нова траса"
+
+[[string]]
+id = "ui.btn.mutate_all"
+text = "Мутувати всіх"
+
+[[string]]
+id = "ui.btn.speed_1x"
+text = "1x"
+
+[[string]]
+id = "ui.btn.speed_2x"
+text = "2x"
+
+[[string]]
+id = "ui.btn.speed_5x"
+text = "5x"
+
+[[string]]
+id = "ui.btn.speed_10x"
+text = "10x"
+
+[[string]]
+id = "ui.btn.toggle_rays"
+text = "Перемкнути промені"
+
+[[string]]
+id = "ui.btn.rays_show"
+text = "Показати промені [V]"
+
+[[string]]
+id = "ui.btn.rays_hide"
+text = "Приховати промені [V]"
+
+[[string]]
+id = "ui.stat.generation"
+text = "Покоління"
+
+[[string]]
+id = "ui.stat.alive"
+text = "Живих авто"
+
+[[string]]
+id = "ui.stat.best_fitness"
+text = "Кращий фітнес"
+
+[[string]]
+id = "ui.stat.all_time_fitness"
+text = "Рекордний фітнес"
+
+[[string]]
+id = "ui.stat.track_seed"
+text = "Сід траси"
+
+[[string]]
+id = "ui.stat.avg_speed"
+text = "Швидкість лідера"
+
+[[string]]
+id = "ui.stat.fps"
+text = "FPS"
+
+[[string]]
+id = "status.ready"
+text = "Симуляція триває. Машинки тренують ваги нейромереж через природний відбір."
+
+[[string]]
+id = "status.paused"
+text = "Симуляцію призупинено."
+
+[[string]]
+id = "status.new_generation"
+text = "Покоління {gen} стартувало на процедурній трасі #{seed}. Кращі геноми збережено."
+
+# Help Navigation & Sections
+[[string]]
+id = "help.nav_title"
+text = "Довідка та теорія"
+
+[[string]]
+id = "help.nav_sub"
+text = "Оберіть тему. Розділи впорядковані від основ до алгоритмічних тонкощів."
+
+[[string]]
+id = "help.section.basics"
+text = "Основи"
+
+[[string]]
+id = "help.section.ai"
+text = "Штучний інтелект"
+
+[[string]]
+id = "help.section.environment"
+text = "Процедурне середовище"
+
+[[string]]
+id = "help.section.architecture"
+text = "Архітектура рушія"
+
+[[string]]
+id = "help.h.idea"
+text = "Концепція"
+
+[[string]]
+id = "help.h.where"
+text = "У симуляції"
+
+[[string]]
+id = "help.h.formulas"
+text = "Математичний апарат"
+
+[[string]]
+id = "help.h.legend"
+text = "Позначення"
+
+[[string]]
+id = "help.h.faq"
+text = "Питання та деталі"
+
+# Topic 0: Intro
+[[string]]
+id = "help.intro.kicker"
+text = "Початок"
+
+[[string]]
+id = "help.intro.title"
+text = "Що таке самонавчальні машинки?"
+
+[[string]]
+id = "help.intro.p1"
+text = "Самонавчальні машинки — це 2D симуляція автономного керування на базі нейроеволюції: генетичний алгоритм оптимізує ваги штучних нейромереж без участі людини та розмічених даних."
+
+[[string]]
+id = "help.intro.p2"
+text = "Кожне авто є повністю незалежним агентом без попередніх знань про форму дороги, траєкторії чи фізику зіткнень. Навички керування виникають виключно шляхом селекції найуспішніших особин."
+
+[[string]]
+id = "help.intro.p4"
+text = "Популяція з 60 нейромережевих агентів одночасно досліджує трасу. Коли всі машини розбиваються або зупиняються, лідери передають ваги нащадкам нового покоління."
+
+[[string]]
+id = "help.intro.note5"
+text = "Траса генерується заново з новим процедурним сідом кожне покоління. Це змушує мережу навчатися узагальненої політики просторового орієнтування, а не зазубрювати повороти."
+
+[[string]]
+id = "help.intro.q0"
+text = "Чи є в машин заздалегідь запрограмована карта?"
+[[string]]
+id = "help.intro.a0"
+text = "Ні. У машин немає GPS або карти. Усі рішення щодо керма та газу приймаються виключно в реальному часі на основі лазерних сенсорів."
+
+[[string]]
+id = "help.intro.try"
+text = "Відкрити симуляцію"
+
+# Topic 1: Sensors
+[[string]]
+id = "help.sensors.kicker"
+text = "Сприйняття"
+
+[[string]]
+id = "help.sensors.title"
+text = "Рейкасти та сенсорний зір"
+
+[[string]]
+id = "help.sensors.p1"
+text = "Автомобілі сприймають навколишній простір за допомогою 7 променевих сенсорів (рейкастів), розташованих симетрично в секторі 120 градусів (-60, -40, -20, 0, +20, +40, +60 градусів від напрямку авто)."
+
+[[string]]
+id = "help.sensors.p2"
+text = "Кожен промінь перевіряє перетин із лівими та правими бордюрами на відстані до 160 пікселів. Нормалізовані дистанції [0, 1] подаються прямо на вхідні нейрони."
+
+[[string]]
+id = "help.sensors.legend0"
+text = "Одиничний вектор напрямку сенсорного променя i"
+
+[[string]]
+id = "help.sensors.legend1"
+text = "Множина всіх лінійних відрізків бордюрів траси"
+
+[[string]]
+id = "help.sensors.legend2"
+text = "Точна геометрична точка перетину лазера з бордюром"
+
+[[string]]
+id = "help.sensors.q0"
+text = "Чому промені змінюють колір?"
+[[string]]
+id = "help.sensors.a0"
+text = "Колір променя плавно переходить від бірюзового (чиста дорога попереду) через бурштиновий до яскраво-червоного при наближенні до перешкоди."
+
+[[string]]
+id = "help.sensors.try"
+text = "Відкрити симуляцію"
+
+# Topic 2: Kinematics
+[[string]]
+id = "help.kinematics.kicker"
+text = "Фізика"
+
+[[string]]
+id = "help.kinematics.title"
+text = "Кінематика авто та зчеплення"
+
+[[string]]
+id = "help.kinematics.p1"
+text = "Рух автомобіля описується 2D кінематичною моделлю: прискорення двигуна, опір кочення асфальту, реверсивне гальмування та поворот передніх коліс."
+
+[[string]]
+id = "help.kinematics.p2"
+text = "Ефективність повороту пропорційна швидкості: автомобіль не може крутитися на місці при нульовій швидкості, що моделює зчеплення шин з дорожнім покриттям."
+
+[[string]]
+id = "help.kinematics.legend0"
+text = "Поточна поздовжня лінійна швидкість авто"
+
+[[string]]
+id = "help.kinematics.legend1"
+text = "Кутовий напрямок корпусу авто в радіанах"
+
+[[string]]
+id = "help.kinematics.legend2"
+text = "Неперервний вихід кута керма [-1, +1] від нейромережі"
+
+[[string]]
+id = "help.kinematics.q0"
+text = "Яка максимальна швидкість машинки?"
+[[string]]
+id = "help.kinematics.a0"
+text = "Максимальна швидкість становить 220 пікселів/секунду, з коефіцієнтом тертя 0.85 та радіусом кузова 9 пікселів."
+
+[[string]]
+id = "help.kinematics.try"
+text = "Відкрити симуляцію"
+
+# Topic 3: Neural Network
+[[string]]
+id = "help.neural_network.kicker"
+text = "Архітектура ШІ"
+
+[[string]]
+id = "help.neural_network.title"
+text = "Багатошаровий перцептрон (MLP)"
+
+[[string]]
+id = "help.neural_network.p1"
+text = "Мозком кожної машини є повнозв'язний перцептрон прямого поширення (Feedforward MLP): 8 вхідних нейронів, 12 прихованих нейронів та 2 вихідних нейрони."
+
+[[string]]
+id = "help.neural_network.p2"
+text = "8 входів кодують 7 дистанцій сенсорів та поточну швидкість. Усі нейрони використовують гіперболічний тангенс (tanh), забезпечуючи плавне пропорційне керування."
+
+[[string]]
+id = "help.neural_network.legend0"
+text = "8-вимірний вектор нормалізованих входів (7 сенсорів + швидкість)"
+
+[[string]]
+id = "help.neural_network.legend1"
+text = "12-вимірні активації нейронів прихованого шару"
+
+[[string]]
+id = "help.neural_network.legend2"
+text = "2-вимірні моторні команди: кермо [-1, 1] та газ/гальмо [-1, 1]"
+
+[[string]]
+id = "help.neural_network.q0"
+text = "Скільки всього параметрів оптимізується?"
+[[string]]
+id = "help.neural_network.a0"
+text = "Рівно 134 дійсних ваги: (8x12 + 12) = 108 у першому шарі, та (12x2 + 2) = 26 у вихідному шарі."
+
+[[string]]
+id = "help.neural_network.try"
+text = "Відкрити статистику"
+
+# Topic 4: Fitness
+[[string]]
+id = "help.fitness.kicker"
+text = "Оцінка"
+
+[[string]]
+id = "help.fitness.title"
+text = "Функція придатності (Fitness)"
+
+[[string]]
+id = "help.fitness.p1"
+text = "Функція фітнесу кількісно визначає успішність агента. Вона нараховує 100 балів за кожен подоланий чекпоїнт, частку відстані до наступних воріт та бонус за загальний кілометраж."
+
+[[string]]
+id = "help.fitness.p2"
+text = "Для відсіювання нерухомих агентів діє таймер дискваліфікації: авто, яке не досягло наступного чекпоїнта за 4.5 секунди, вибуває із заїзду."
+
+[[string]]
+id = "help.fitness.legend0"
+text = "Кількість послідовно пройдених воріт чекпоїнтів"
+
+[[string]]
+id = "help.fitness.legend1"
+text = "Евклідова відстань до центру наступного цільового чекпоїнта"
+
+[[string]]
+id = "help.fitness.legend2"
+text = "Сумарна пройдена дистанція вздовж полотна траси"
+
+[[string]]
+id = "help.fitness.q0"
+text = "Навіщо потрібна дробова частка відстані?"
+[[string]]
+id = "help.fitness.a0"
+text = "Вона забезпечує неперервний градієнт: навіть серед машин, які розбилися між тими самими воротами, перевагу отримує та, яка проїхала далі."
+
+[[string]]
+id = "help.fitness.try"
+text = "Відкрити симуляцію"
+
+# Topic 5: Genetics
+[[string]]
+id = "help.genetics.kicker"
+text = "Еволюція"
+
+[[string]]
+id = "help.genetics.title"
+text = "Селекція, кросовер та мутації"
+
+[[string]]
+id = "help.genetics.p1"
+text = "Генетичний алгоритм керує популяцією з 60 геномів. Елітаризм переносить 5 найкращих лідерів у наступне покоління без змін, що гарантує збереження досягнутого рівня."
+
+[[string]]
+id = "help.genetics.p2"
+text = "Решта 55 особин формуються через турнірну селекцію (розмір турніру 5), арифметичний кросовер ваг та гауссівські мутації з випадковими збуреннями."
+
+[[string]]
+id = "help.genetics.legend0"
+text = "Гауссівське збурення ваги з розподілу N(0, sigma^2) при sigma = 0.15"
+
+[[string]]
+id = "help.genetics.legend1"
+text = "Випадковий коефіцієнт лінійного змішування ваг у діапазоні [0, 1]"
+
+[[string]]
+id = "help.genetics.legend2"
+text = "Ваги батьківських геномів, відібраних у змагальному турнірі"
+
+[[string]]
+id = "help.genetics.q0"
+text = "Що робить кнопка «Мутувати всіх»?"
+[[string]]
+id = "help.genetics.a0"
+text = "Вона прикладає сильний стохастичний імпульс (sigma = 0.45) до всієї популяції, щоб вибити рій із тупикового локального оптимуму."
+
+[[string]]
+id = "help.genetics.try"
+text = "Відкрити симуляцію"
+
+# Topic 6: Spline Generation
+[[string]]
+id = "help.spline_generation.kicker"
+text = "Геометрія"
+
+[[string]]
+id = "help.spline_generation.title"
+text = "Процедурна генерація сплайну"
+
+[[string]]
+id = "help.spline_generation.p1"
+text = "Траси будуються як замкнені параметричні петлі Catmull-Rom. Процедурні сектори включають шикани (чергування S-вигинів), гострі шпильки та швидкісні прямі."
+
+[[string]]
+id = "help.spline_generation.p2"
+text = "Лапласівське згладжування контрольних точок гарантує C1-гладкість. Лінія старту динамічно прив'язується до найдовшої горизонтальної прямої."
+
+[[string]]
+id = "help.spline_generation.legend0"
+text = "Чотири послідовні опорні точки Catmull-Rom уздовж замкненої петлі"
+
+[[string]]
+id = "help.spline_generation.legend1"
+text = "Нормалізований локальний параметр інтерполяції між точками p1 та p2"
+
+[[string]]
+id = "help.spline_generation.q0"
+text = "Скільки точок формують замкнене кільце?"
+[[string]]
+id = "help.spline_generation.a0"
+text = "18 контрольних точок по 24 інтерполяційних кроки дають 432 опорні вершини для побудови гладких мешів дороги."
+
+[[string]]
+id = "help.spline_generation.try"
+text = "Відкрити симуляцію"
+
+# Topic 7: Road Mesh
+[[string]]
+id = "help.road_mesh.kicker"
+text = "Графіка"
+
+[[string]]
+id = "help.road_mesh.title"
+text = "Процедурні стрічкові меші дороги"
+
+[[string]]
+id = "help.road_mesh.p1"
+text = "Асфальтне полотно та гоночні бордюри генеруються динамічно на CPU та завантажуються у відеопам'ять як нативні вертексні буфери через IGraphicFactory::create_mesh."
+
+[[string]]
+id = "help.road_mesh.p2"
+text = "Адаптивні відступи запобігають самоперетинам на крутих шпильках: внутрішнє зміщення обмежується радіусом кривизни R, усуваючи злами та артефакти."
+
+[[string]]
+id = "help.road_mesh.legend0"
+text = "Координати точки на осьовій лінії сплайну"
+
+[[string]]
+id = "help.road_mesh.legend1"
+text = "2D одиничний вектор нормалі до тангенса траси"
+
+[[string]]
+id = "help.road_mesh.legend2"
+text = "Адаптивні напівширини асфальтного полотна ліворуч і праворуч"
+
+[[string]]
+id = "help.road_mesh.q0"
+text = "Що означають кольорові бордюри?"
+[[string]]
+id = "help.road_mesh.a0"
+text = "Червоний зовнішній та бірюзовий внутрішній бордюри — це окремі стрічкові меші шириною 4.5 px вздовж країв асфальту."
+
+[[string]]
+id = "help.road_mesh.try"
+text = "Відкрити симуляцію"
+
+# Topic 8: Checkpoints
+[[string]]
+id = "help.checkpoints.kicker"
+text = "Логіка"
+
+[[string]]
+id = "help.checkpoints.title"
+text = "Ворота чекпоїнтів та колізії"
+
+[[string]]
+id = "help.checkpoints.p1"
+text = "432 лінії чекпоїнтів орієнтовані перпендикулярно до осьової лінії. Перетин воріт фіксується через скалярний добуток вектора зміщення авто на тангенс траси."
+
+[[string]]
+id = "help.checkpoints.p2"
+text = "Зіткнення машини з бордюром перевіряється точним тестом відстані від центру кузова до всіх відрізків стін траси."
+
+[[string]]
+id = "help.checkpoints.legend0"
+text = "Координати центру воріт чекпоїнта k"
+
+[[string]]
+id = "help.checkpoints.legend1"
+text = "Одиничний вектор тангенса прямого напрямку руху трасою"
+
+[[string]]
+id = "help.checkpoints.legend2"
+text = "Ширина полотна дороги в зоні чекпоїнта k"
+
+[[string]]
+id = "help.checkpoints.q0"
+text = "Що відбувається при зіткненні авто зі стіною?"
+[[string]]
+id = "help.checkpoints.a0"
+text = "Автомобіль деактивується, миттєво зупиняється та переходить у фоновий шар (layer 4) із напівпрозорістю (0.16), не заважаючи живим машинам."
+
+[[string]]
+id = "help.checkpoints.try"
+text = "Відкрити симуляцію"
+
+# Topic 9: ECS
+[[string]]
+id = "help.ecs.kicker"
+text = "Рушій"
+
+[[string]]
+id = "help.ecs.title"
+text = "Архітектура Wind ECS"
+
+[[string]]
+id = "help.ecs.p1"
+text = "Симуляція побудована на базі Entity Component System рушія Wind. Сутності складаються виключно з чистих компонентів даних (Transform, Sprite, Car, RaycastSensors, Brain)."
+
+[[string]]
+id = "help.ecs.p2"
+text = "Системи виконуються в розкладі Schedule::Fixed із частотою 60 Hz у строгому порядку: Sensors -> Brains -> Physics -> Evolution, повністю незалежно від FPS рендерингу."
+
+[[string]]
+id = "help.ecs.legend0"
+text = "Дискретне оновлення з фіксованим кроком (детермінована фізика 60 Hz)"
+
+[[string]]
+id = "help.ecs.legend1"
+text = "Фаза виконання ігрової логіки в головному циклі рушія"
+
+[[string]]
+id = "help.ecs.legend2"
+text = "Система розрахунку дистанцій променевих сенсорів"
+
+[[string]]
+id = "help.ecs.q0"
+text = "Як працює прискорення симуляції (2x, 5x, 10x)?"
+[[string]]
+id = "help.ecs.a0"
+text = "Ігровий цикл виконує кілька послідовних фіксованих кроків за один графічний кадр без втрати точності розрахунку фізики."
+
+[[string]]
+id = "help.ecs.try"
+text = "Відкрити симуляцію"

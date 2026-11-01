@@ -1,0 +1,562 @@
+locale = "en"
+
+[[string]]
+id = "app.title"
+text = "Self-Learning Cars — Neuroevolution Simulation"
+
+[[string]]
+id = "ui.tab.simulation"
+text = "Simulation"
+
+[[string]]
+id = "ui.tab.stats"
+text = "Evolution Stats"
+
+[[string]]
+id = "ui.tab.help"
+text = "Help"
+
+[[string]]
+id = "ui.tab.theory"
+text = "Help"
+
+[[string]]
+id = "ui.group.control"
+text = "Controls"
+
+[[string]]
+id = "ui.group.metrics"
+text = "Live Metrics"
+
+[[string]]
+id = "ui.group.track"
+text = "Track Generation"
+
+[[string]]
+id = "ui.group.evolution"
+text = "Genetic Algorithm"
+
+[[string]]
+id = "ui.btn.play"
+text = "Resume"
+
+[[string]]
+id = "ui.btn.pause"
+text = "Pause"
+
+[[string]]
+id = "ui.btn.reset"
+text = "Restart Evolution"
+
+[[string]]
+id = "ui.btn.next_track"
+text = "New Track Seed"
+
+[[string]]
+id = "ui.btn.mutate_all"
+text = "Mutate All"
+
+[[string]]
+id = "ui.btn.speed_1x"
+text = "1x"
+
+[[string]]
+id = "ui.btn.speed_2x"
+text = "2x"
+
+[[string]]
+id = "ui.btn.speed_5x"
+text = "5x"
+
+[[string]]
+id = "ui.btn.speed_10x"
+text = "10x"
+
+[[string]]
+id = "ui.btn.toggle_rays"
+text = "Toggle Sensors"
+
+[[string]]
+id = "ui.btn.rays_show"
+text = "Show Sensor Rays [V]"
+
+[[string]]
+id = "ui.btn.rays_hide"
+text = "Hide Sensor Rays [V]"
+
+[[string]]
+id = "ui.stat.generation"
+text = "Generation"
+
+[[string]]
+id = "ui.stat.alive"
+text = "Alive Cars"
+
+[[string]]
+id = "ui.stat.best_fitness"
+text = "Gen Best Fitness"
+
+[[string]]
+id = "ui.stat.all_time_fitness"
+text = "Record Fitness"
+
+[[string]]
+id = "ui.stat.track_seed"
+text = "Track Seed"
+
+[[string]]
+id = "ui.stat.avg_speed"
+text = "Leader Speed"
+
+[[string]]
+id = "ui.stat.fps"
+text = "FPS"
+
+[[string]]
+id = "status.ready"
+text = "Simulation running. Cars are evolving neural network weights via genetic selection."
+
+[[string]]
+id = "status.paused"
+text = "Simulation paused."
+
+[[string]]
+id = "status.new_generation"
+text = "Generation {gen} started on procedural track #{seed}. Top genomes preserved."
+
+# Help Navigation & Sections
+[[string]]
+id = "help.nav_title"
+text = "Help & Theory"
+
+[[string]]
+id = "help.nav_sub"
+text = "Select a topic. The order goes from fundamentals to algorithmic details."
+
+[[string]]
+id = "help.section.basics"
+text = "Basics"
+
+[[string]]
+id = "help.section.ai"
+text = "Artificial Intelligence"
+
+[[string]]
+id = "help.section.environment"
+text = "Procedural Environment"
+
+[[string]]
+id = "help.section.architecture"
+text = "Architecture & Performance"
+
+[[string]]
+id = "help.h.idea"
+text = "The idea"
+
+[[string]]
+id = "help.h.where"
+text = "In the simulation"
+
+[[string]]
+id = "help.h.formulas"
+text = "Mathematical formulation"
+
+[[string]]
+id = "help.h.legend"
+text = "What the symbols mean"
+
+[[string]]
+id = "help.h.faq"
+text = "Questions & Details"
+
+# Topic 0: Intro
+[[string]]
+id = "help.intro.kicker"
+text = "Start here"
+
+[[string]]
+id = "help.intro.title"
+text = "What is Self-Learning Cars?"
+
+[[string]]
+id = "help.intro.p1"
+text = "Self-Learning Cars is a 2D autonomous driving simulation powered by neuroevolution: a genetic algorithm trains artificial neural networks through natural selection without human supervision."
+
+[[string]]
+id = "help.intro.p2"
+text = "Each car is an independent agent with no prior knowledge of track geometry, steering lines, or collision physics. Driving behavior emerges purely through generational selection of the fittest agents."
+
+[[string]]
+id = "help.intro.p4"
+text = "A population of 60 neural network agents tests their driving policies concurrently. When all cars crash or stall, the top performers reproduce while inferior genomes are replaced."
+
+[[string]]
+id = "help.intro.note5"
+text = "The circuit regenerates with a new procedural seed every generation. Cars must learn generalized spatial driving policies instead of memorizing fixed track paths."
+
+[[string]]
+id = "help.intro.q0"
+text = "Does any car have a pre-programmed track map?"
+[[string]]
+id = "help.intro.a0"
+text = "No. Cars have zero GPS or map data. All steering and throttle decisions are computed exclusively in real-time from raycast laser readings."
+
+[[string]]
+id = "help.intro.try"
+text = "Open Simulation"
+
+# Topic 1: Sensors
+[[string]]
+id = "help.sensors.kicker"
+text = "Perception"
+
+[[string]]
+id = "help.sensors.title"
+text = "Raycast Sensors & Laser Vision"
+
+[[string]]
+id = "help.sensors.p1"
+text = "Vehicles perceive the track using 7 forward-facing raycast sensors arranged symmetrically across 120 degrees (-60, -40, -20, 0, +20, +40, +60 degrees relative to vehicle heading)."
+
+[[string]]
+id = "help.sensors.p2"
+text = "Each ray tests for segment intersections against all left and right track barriers up to a maximum range of 160 pixels. Distances are normalized to [0, 1] where 1.0 means open road."
+
+[[string]]
+id = "help.sensors.legend0"
+text = "Normalized directional vector of sensor ray i"
+
+[[string]]
+id = "help.sensors.legend1"
+text = "Set of all barrier line segments forming track curbs"
+
+[[string]]
+id = "help.sensors.legend2"
+text = "Intersection point between laser beam and barrier segment"
+
+[[string]]
+id = "help.sensors.q0"
+text = "How do the rays change color?"
+[[string]]
+id = "help.sensors.a0"
+text = "Beams smoothly transition from cyan (far clear path) through amber to bright red when approaching within danger thresholds of barriers."
+
+[[string]]
+id = "help.sensors.try"
+text = "Open Simulation"
+
+# Topic 2: Kinematics
+[[string]]
+id = "help.kinematics.kicker"
+text = "Physics"
+
+[[string]]
+id = "help.kinematics.title"
+text = "Car Kinematics & Steering"
+
+[[string]]
+id = "help.kinematics.p1"
+text = "Vehicle movement follows a non-linear 2D bicycle kinematic model with forward acceleration, rolling friction, reverse braking, and velocity-dependent steering angular velocity."
+
+[[string]]
+id = "help.kinematics.p2"
+text = "Steering effectiveness is proportional to forward velocity: cars cannot rotate on the spot at zero speed, mirroring real-world vehicle tire traction."
+
+[[string]]
+id = "help.kinematics.legend0"
+text = "Current forward longitudinal velocity"
+
+[[string]]
+id = "help.kinematics.legend1"
+text = "Vehicle heading angle in radians"
+
+[[string]]
+id = "help.kinematics.legend2"
+text = "Continuous steering output [-1, +1] from the neural network"
+
+[[string]]
+id = "help.kinematics.q0"
+text = "What is the maximum car speed?"
+[[string]]
+id = "help.kinematics.a0"
+text = "Vehicles reach a maximum speed of 220 pixels/second, balanced with a rolling drag coefficient of 0.85 and crash barrier radius of 9 pixels."
+
+[[string]]
+id = "help.kinematics.try"
+text = "Open Simulation"
+
+# Topic 3: Neural Network
+[[string]]
+id = "help.neural_network.kicker"
+text = "AI Architecture"
+
+[[string]]
+id = "help.neural_network.title"
+text = "Multi-Layer Perceptron (MLP)"
+
+[[string]]
+id = "help.neural_network.p1"
+text = "Each car is steered by a feedforward Multi-Layer Perceptron with 8 input neurons, 12 hidden neurons, and 2 output neurons."
+
+[[string]]
+id = "help.neural_network.p2"
+text = "The 8 inputs represent the 7 raycast distances plus normalized speed. All neurons employ the hyperbolic tangent (tanh) activation function, providing smooth bounded control."
+
+[[string]]
+id = "help.neural_network.legend0"
+text = "8-dimensional normalized input vector (7 raycasts + speed ratio)"
+
+[[string]]
+id = "help.neural_network.legend1"
+text = "12-dimensional hidden layer activations"
+
+[[string]]
+id = "help.neural_network.legend2"
+text = "2-dimensional motor outputs: steering [-1, 1] and throttle [-1, 1]"
+
+[[string]]
+id = "help.neural_network.q0"
+text = "How many total weights are optimized?"
+[[string]]
+id = "help.neural_network.a0"
+text = "Exactly 134 real-valued parameters: (8x12 + 12) = 108 in layer 1, and (12x2 + 2) = 26 in layer 2."
+
+[[string]]
+id = "help.neural_network.try"
+text = "Open Evolution Stats"
+
+# Topic 4: Fitness
+[[string]]
+id = "help.fitness.kicker"
+text = "Evaluation"
+
+[[string]]
+id = "help.fitness.title"
+text = "Fitness Function & Objectives"
+
+[[string]]
+id = "help.fitness.p1"
+text = "The fitness function quantifies how effectively a genome drives. It grants 100 points per checkpoint passed, distance fraction to the next gate, and a mileage bonus."
+
+[[string]]
+id = "help.fitness.p2"
+text = "To eliminate unmoving or looping cars, an anti-stall watchdog timer eliminates any car that fails to reach the next checkpoint within 4.5 seconds."
+
+[[string]]
+id = "help.fitness.legend0"
+text = "Total count of consecutive track checkpoints successfully crossed"
+
+[[string]]
+id = "help.fitness.legend1"
+text = "Euclidean distance to the centerline of the next target checkpoint gate"
+
+[[string]]
+id = "help.fitness.legend2"
+text = "Cumulative distance driven along the track"
+
+[[string]]
+id = "help.fitness.q0"
+text = "Why is there a distance fraction bonus?"
+[[string]]
+id = "help.fitness.a0"
+text = "It provides a continuous gradient: even among cars that crashed between the same checkpoints, the car that traveled closer to the next gate is favored."
+
+[[string]]
+id = "help.fitness.try"
+text = "Open Simulation"
+
+# Topic 5: Genetics
+[[string]]
+id = "help.genetics.kicker"
+text = "Evolution"
+
+[[string]]
+id = "help.genetics.title"
+text = "Selection, Crossover & Mutation"
+
+[[string]]
+id = "help.genetics.p1"
+text = "The genetic algorithm maintains a population of 60 candidate genomes. Elitism preserves the top 5 performers without modification, guaranteeing that generational performance never degrades."
+
+[[string]]
+id = "help.genetics.p2"
+text = "Non-elite slots are filled via tournament selection (tournament size 5), arithmetic weight crossover, and Gaussian mutation with adaptive perturbation."
+
+[[string]]
+id = "help.genetics.legend0"
+text = "Gaussian perturbation drawn from N(0, sigma^2) with sigma = 0.15"
+
+[[string]]
+id = "help.genetics.legend1"
+text = "Random arithmetic crossover blending weight in [0, 1]"
+
+[[string]]
+id = "help.genetics.legend2"
+text = "Parent weights chosen through competitive tournament selection"
+
+[[string]]
+id = "help.genetics.q0"
+text = "What does the Mutate All button do?"
+[[string]]
+id = "help.genetics.a0"
+text = "It applies a strong Gaussian shock (sigma = 0.45) across the entire population to kick the swarm out of stagnant local optima."
+
+[[string]]
+id = "help.genetics.try"
+text = "Open Simulation"
+
+# Topic 6: Spline Generation
+[[string]]
+id = "help.spline_generation.kicker"
+text = "Geometry"
+
+[[string]]
+id = "help.spline_generation.title"
+text = "Procedural Spline Generation"
+
+[[string]]
+id = "help.spline_generation.p1"
+text = "Tracks are constructed as closed parametric Catmull-Rom loops. Procedural sectors include chicanes (alternating S-curves), hairpin bends, and high-speed straights."
+
+[[string]]
+id = "help.spline_generation.p2"
+text = "A Laplacian smoothing pass guarantees C1 continuity. The start line is dynamically indexed to the flattest straightaway section with maximum longitudinal clearance."
+
+[[string]]
+id = "help.spline_generation.legend0"
+text = "Four consecutive Catmull-Rom control points along the loop"
+
+[[string]]
+id = "help.spline_generation.legend1"
+text = "Normalized segment interpolation parameter between p1 and p2"
+
+[[string]]
+id = "help.spline_generation.q0"
+text = "How many samples form the track loop?"
+[[string]]
+id = "help.spline_generation.a0"
+text = "18 control points sampled at 24 steps per segment produce 432 high-resolution spline vertices for smooth ribbon meshing."
+
+[[string]]
+id = "help.spline_generation.try"
+text = "Open Simulation"
+
+# Topic 7: Road Mesh
+[[string]]
+id = "help.road_mesh.kicker"
+text = "Graphics"
+
+[[string]]
+id = "help.road_mesh.title"
+text = "Procedural Road Ribbon Meshes"
+
+[[string]]
+id = "help.road_mesh.p1"
+text = "The asphalt surface and curbs are generated dynamically on CPU and uploaded as native GPU vertex buffers using IGraphicFactory::create_mesh."
+
+[[string]]
+id = "help.road_mesh.p2"
+text = "Curvature-adaptive offsets prevent cusp singularities on technical hairpins: inside offsets are constrained by curvature radius R to avoid self-intersecting swallowtails."
+
+[[string]]
+id = "help.road_mesh.legend0"
+text = "Position on the spline centerline"
+
+[[string]]
+id = "help.road_mesh.legend1"
+text = "2D perpendicular unit normal vector"
+
+[[string]]
+id = "help.road_mesh.legend2"
+text = "Curvature-adjusted road half-widths on left and right borders"
+
+[[string]]
+id = "help.road_mesh.q0"
+text = "What are the colored curbs?"
+[[string]]
+id = "help.road_mesh.a0"
+text = "The red outer curb and cyan inner curb are continuous ribbon meshes extruded 4.5 pixels outward from the asphalt boundary."
+
+[[string]]
+id = "help.road_mesh.try"
+text = "Open Simulation"
+
+# Topic 8: Checkpoints
+[[string]]
+id = "help.checkpoints.kicker"
+text = "Logic"
+
+[[string]]
+id = "help.checkpoints.title"
+text = "Checkpoint Gates & Collisions"
+
+[[string]]
+id = "help.checkpoints.p1"
+text = "432 checkpoint gates are placed perpendicular to track tangents. Gate crossing is detected using vector projection in the forward direction."
+
+[[string]]
+id = "help.checkpoints.p2"
+text = "Car collisions against curb barriers are verified using exact point-to-segment distance tests against both continuous boundary chains."
+
+[[string]]
+id = "help.checkpoints.legend0"
+text = "Center point of checkpoint line k"
+
+[[string]]
+id = "help.checkpoints.legend1"
+text = "Forward tangent unit vector along the circuit"
+
+[[string]]
+id = "help.checkpoints.legend2"
+text = "Road width at checkpoint k"
+
+[[string]]
+id = "help.checkpoints.q0"
+text = "What happens when a car crashes?"
+[[string]]
+id = "help.checkpoints.a0"
+text = "The car is marked inactive, halts immediately, and drops to background layer 4 with translucent alpha (0.16) to keep active racers visible."
+
+[[string]]
+id = "help.checkpoints.try"
+text = "Open Simulation"
+
+# Topic 9: ECS
+[[string]]
+id = "help.ecs.kicker"
+text = "Engine"
+
+[[string]]
+id = "help.ecs.title"
+text = "Wind ECS Simulation Architecture"
+
+[[string]]
+id = "help.ecs.p1"
+text = "The simulation is built entirely on the Wind Entity Component System. Entities consist pure data components (Transform, Sprite, Car, RaycastSensors, Brain)."
+
+[[string]]
+id = "help.ecs.p2"
+text = "Systems execute under Schedule::Fixed at 60 Hz in strict phase order: Sensors -> Brains -> Physics -> Evolution, completely decoupled from render frame rate."
+
+[[string]]
+id = "help.ecs.legend0"
+text = "Discrete fixed timestep execution (60 Hz deterministic physics)"
+
+[[string]]
+id = "help.ecs.legend1"
+text = "Game logic execution phase inside the engine world loop"
+
+[[string]]
+id = "help.ecs.legend2"
+text = "Parallel raycast sensor distance evaluation system"
+
+[[string]]
+id = "help.ecs.q0"
+text = "How do speed multipliers (2x, 5x, 10x) work?"
+[[string]]
+id = "help.ecs.a0"
+text = "The simulation loop runs multiple fixed update steps within a single graphic frame without compromising physics accuracy."
+
+[[string]]
+id = "help.ecs.try"
+text = "Open Simulation"

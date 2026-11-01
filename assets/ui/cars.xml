@@ -1,0 +1,181 @@
+<Canvas id="cars">
+  <Stack class="root" direction="vertical">
+    <!-- Top Navigation Bar -->
+    <Stack class="tabbar" direction="horizontal">
+      <Stack class="tab-slot" direction="vertical">
+        <Button id="tab-simulation" class="tab" command="{binding showSimulation}" content="{tr ui.tab.simulation}"/>
+        <Stack class="tab-line" direction="vertical" if="{binding tabSimulation}"/>
+      </Stack>
+      <Stack class="tab-slot" direction="vertical">
+        <Button id="tab-stats" class="tab" command="{binding showStats}" content="{tr ui.tab.stats}"/>
+        <Stack class="tab-line" direction="vertical" if="{binding tabStats}"/>
+      </Stack>
+      <Stack class="tab-slot" direction="vertical">
+        <Button id="tab-help" class="tab" command="{binding showHelp}" content="{tr ui.tab.help}"/>
+        <Stack class="tab-line" direction="vertical" if="{binding tabHelp}"/>
+      </Stack>
+
+      <Stack class="tab-spacer" direction="vertical"/>
+
+      <!-- Language Switcher -->
+      <Stack class="lang-slot" direction="vertical">
+        <Button id="lang-en" class="tab" command="{binding localeEn}" content="EN"/>
+        <Stack class="tab-line" direction="vertical" if="{binding localeIsEn}"/>
+      </Stack>
+      <Stack class="lang-slot" direction="vertical">
+        <Button id="lang-uk" class="tab" command="{binding localeUk}" content="UA"/>
+        <Stack class="tab-line" direction="vertical" if="{binding localeIsUk}"/>
+      </Stack>
+    </Stack>
+    <Stack class="tab-divider" direction="horizontal"/>
+
+    <!-- TAB 1: Simulation Screen (World HUD) -->
+    <Stack class="screen screen-sim" direction="horizontal" if="{binding tabSimulation}">
+      <!-- Left sidebar -->
+      <Stack class="column w320 sim-sidebar" direction="vertical">
+        <Label class="title" text="{tr ui.tab.simulation}"/>
+
+        <!-- Control Group -->
+        <Stack class="group" direction="vertical">
+          <Label class="group-title" text="{tr ui.group.control}"/>
+          <Stack class="buttons-row" direction="horizontal">
+            <Button id="btn-toggle-play" class="primary half" command="{binding togglePause}" content="{binding playPauseText}"/>
+            <Button id="btn-reset" class="action half" command="{binding resetEvolution}" content="{tr ui.btn.reset}"/>
+          </Stack>
+          <Stack class="buttons-row" direction="horizontal">
+            <Button id="btn-next-track" class="action half" command="{binding nextTrack}" content="{tr ui.btn.next_track}"/>
+            <Button id="btn-mutate" class="action half" command="{binding mutateAll}" content="{tr ui.btn.mutate_all}"/>
+          </Stack>
+        </Stack>
+
+        <!-- Speed Multiplier Group -->
+        <Stack class="group" direction="vertical">
+          <Label class="group-title" text="Simulation Speed"/>
+          <Stack class="buttons-row" direction="horizontal">
+            <Button class="speed-btn" command="{binding setSpeed1x}" content="1x"/>
+            <Button class="speed-btn" command="{binding setSpeed2x}" content="2x"/>
+            <Button class="speed-btn" command="{binding setSpeed5x}" content="5x"/>
+            <Button class="speed-btn" command="{binding setSpeed10x}" content="10x"/>
+          </Stack>
+          <Button id="btn-toggle-rays" class="action wide" command="{binding toggleRays}" content="{binding toggleRaysText}"/>
+        </Stack>
+
+        <!-- Live Metrics Group -->
+        <Stack class="group" direction="vertical">
+          <Label class="group-title" text="{tr ui.group.metrics}"/>
+          <Stack class="metric-row" direction="horizontal">
+            <Label class="metric-label" text="{tr ui.stat.generation}"/>
+            <Label class="metric-val" text="{binding generationText}"/>
+          </Stack>
+          <Stack class="metric-row" direction="horizontal">
+            <Label class="metric-label" text="{tr ui.stat.alive}"/>
+            <Label class="metric-val" text="{binding aliveCarsText}"/>
+          </Stack>
+          <Stack class="metric-row" direction="horizontal">
+            <Label class="metric-label" text="{tr ui.stat.best_fitness}"/>
+            <Label class="metric-val highlight" text="{binding bestFitnessText}"/>
+          </Stack>
+          <Stack class="metric-row" direction="horizontal">
+            <Label class="metric-label" text="{tr ui.stat.all_time_fitness}"/>
+            <Label class="metric-val record" text="{binding allTimeFitnessText}"/>
+          </Stack>
+          <Stack class="metric-row" direction="horizontal">
+            <Label class="metric-label" text="{tr ui.stat.track_seed}"/>
+            <Label class="metric-val" text="{binding trackSeedText}"/>
+          </Stack>
+          <Stack class="metric-row" direction="horizontal">
+            <Label class="metric-label" text="{tr ui.stat.avg_speed}"/>
+            <Label class="metric-val" text="{binding leaderSpeedText}"/>
+          </Stack>
+          <Stack class="metric-row" direction="horizontal">
+            <Label class="metric-label" text="{tr ui.stat.fps}"/>
+            <Label class="metric-val" text="{binding fpsText}"/>
+          </Stack>
+        </Stack>
+      </Stack>
+
+      <Stack class="viewport-spacer" direction="vertical"/>
+    </Stack>
+
+    <!-- TAB 2: Stats Screen -->
+    <Stack class="screen screen-stats" direction="vertical" if="{binding tabStats}">
+      <Stack class="info-card" direction="vertical">
+        <Label class="card-title" text="{tr ui.tab.stats}"/>
+        <Label class="card-text" text="Neuroevolution details: population of 60 neural network drivers evolving across procedural tracks."/>
+        
+        <Stack class="metric-row" direction="horizontal">
+          <Label class="metric-label" text="Generations evaluated:"/>
+          <Label class="metric-val" text="{binding generationText}"/>
+        </Stack>
+        <Stack class="metric-row" direction="horizontal">
+          <Label class="metric-label" text="Peak fitness reached:"/>
+          <Label class="metric-val record" text="{binding allTimeFitnessText}"/>
+        </Stack>
+        <Stack class="metric-row" direction="horizontal">
+          <Label class="metric-label" text="Current generation leader:"/>
+          <Label class="metric-val highlight" text="{binding bestFitnessText}"/>
+        </Stack>
+        <Stack class="metric-row" direction="horizontal">
+          <Label class="metric-label" text="Track procedural seed:"/>
+          <Label class="metric-val" text="{binding trackSeedText}"/>
+        </Stack>
+      </Stack>
+    </Stack>
+
+    <!-- TAB 3: Help Screen -->
+    <Stack class="screen screen-dark" direction="horizontal" if="{binding tabHelp}">
+      <Stack class="column w280" direction="vertical">
+        <Label class="title" text="{tr help.nav_title}"/>
+        <Label class="hint" text="{tr help.nav_sub}"/>
+        <ScrollView class="help-nav" direction="vertical">
+          <ItemsControl class="help-nav-list" items_source="{binding helpNav}">
+            <ItemTemplate>
+              <Stack class="help-nav-row" direction="vertical">
+                <Label class="help-nav-header" if="{binding isHeader}" text="{binding title}"/>
+                <Button class="help-nav-item" if="{binding isTopic}" content="{binding title}" command="{binding select}"/>
+                <Button class="help-nav-active" if="{binding isActive}" content="{binding title}" command="{binding select}"/>
+              </Stack>
+            </ItemTemplate>
+          </ItemsControl>
+        </ScrollView>
+      </Stack>
+      <ScrollView class="help-content" direction="vertical" scroll-y="{binding helpScroll}">
+        <ItemsControl class="h-topic" items_source="{binding helpTopic0}" if="{binding helpShown0}">
+            <ItemTemplate src="help_topics/intro.xml"/>
+        </ItemsControl>
+        <ItemsControl class="h-topic" items_source="{binding helpTopic1}" if="{binding helpShown1}">
+            <ItemTemplate src="help_topics/sensors.xml"/>
+        </ItemsControl>
+        <ItemsControl class="h-topic" items_source="{binding helpTopic2}" if="{binding helpShown2}">
+            <ItemTemplate src="help_topics/kinematics.xml"/>
+        </ItemsControl>
+        <ItemsControl class="h-topic" items_source="{binding helpTopic3}" if="{binding helpShown3}">
+            <ItemTemplate src="help_topics/neural_network.xml"/>
+        </ItemsControl>
+        <ItemsControl class="h-topic" items_source="{binding helpTopic4}" if="{binding helpShown4}">
+            <ItemTemplate src="help_topics/fitness.xml"/>
+        </ItemsControl>
+        <ItemsControl class="h-topic" items_source="{binding helpTopic5}" if="{binding helpShown5}">
+            <ItemTemplate src="help_topics/genetics.xml"/>
+        </ItemsControl>
+        <ItemsControl class="h-topic" items_source="{binding helpTopic6}" if="{binding helpShown6}">
+            <ItemTemplate src="help_topics/spline_generation.xml"/>
+        </ItemsControl>
+        <ItemsControl class="h-topic" items_source="{binding helpTopic7}" if="{binding helpShown7}">
+            <ItemTemplate src="help_topics/road_mesh.xml"/>
+        </ItemsControl>
+        <ItemsControl class="h-topic" items_source="{binding helpTopic8}" if="{binding helpShown8}">
+            <ItemTemplate src="help_topics/checkpoints.xml"/>
+        </ItemsControl>
+        <ItemsControl class="h-topic" items_source="{binding helpTopic9}" if="{binding helpShown9}">
+            <ItemTemplate src="help_topics/ecs.xml"/>
+        </ItemsControl>
+      </ScrollView>
+    </Stack>
+
+    <!-- Bottom Status Bar -->
+    <Stack class="statusbar" direction="horizontal">
+      <Label class="status-text" text="{binding statusMessage}"/>
+    </Stack>
+  </Stack>
+</Canvas>
